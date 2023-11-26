@@ -37,14 +37,6 @@
  *
  * This sample app display text strings per line & page wise.
  *
- * Every 3 second you should see this repeatedly
- * on display:
- * 
- *     *********************
- *     nRF7002 DK
- *
- *      ------------------
- *     HD44780-LCD!
  */
 #include "app_hd44780.h"
 #include <zephyr/sys/printk.h>
@@ -60,12 +52,12 @@ static const struct device *const gpio_dev = DEVICE_DT_GET(GPIO_NODE);
 #define GPIO_PIN_PC13_D1		1	/* D1 */
 #define GPIO_PIN_PC14_D2		4	/* D2 */
 #define GPIO_PIN_PC15_D3		5	/* D3 */
-#define GPIO_PIN_PC24_D4		10	/* D0 */
-#define GPIO_PIN_PC23_D5		11	/* D1 */
-#define GPIO_PIN_PC22_D6		12	/* D2 */
-#define GPIO_PIN_PC21_D7		13	/* D3 */
-#define GPIO_PIN_PC28_RS		14	/* D8 */
-#define GPIO_PIN_PC25_E			15	/* D9 */
+#define GPIO_PIN_PC24_D4		6	/* D4 */
+#define GPIO_PIN_PC23_D5		7	/* D5 */
+#define GPIO_PIN_PC22_D6		8	/* D6 */
+#define GPIO_PIN_PC21_D7		9	/* D7 */
+#define GPIO_PIN_PC28_RS		10	/* D8 */
+#define GPIO_PIN_PC25_E			11	/* D9 */
 #define GPIO_NAME			"GPIO_"
 
 /* Commands */

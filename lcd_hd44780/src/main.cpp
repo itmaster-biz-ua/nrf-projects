@@ -29,7 +29,9 @@
  * 15: LCD Backlight +5V**
  * 16: LCD Backlight GND
  *
- *
+ * See "Define GPIO OUT to LCD" in app_hd44780.cpp
+ * for LCD pin assigments
+ * 
  * nRF7002 DK
  * -----------
  *
@@ -38,13 +40,11 @@
  * This sample app display text strings per line & page wise.
  *
  * Every 3 second you should see this repeatedly
- * on display:
+ * on display (and value is decremented):
  * 
- *     *********************
- *     nRF7002 DK 0
+ *         Current=12304 A
+ *         Power=12304   W
  *
- *      ------------------
- *     HD44780-LCD!
  */
 #include "app_hd44780.h"
 
@@ -89,7 +89,7 @@ int main(void)
 
 
 		AppHd44780::LCDClear() ;*/
-      k_msleep(MSEC_PER_SEC * 3U);
+        k_msleep(MSEC_PER_SEC * 3U);
 		--value;
 	}
 	return 0;

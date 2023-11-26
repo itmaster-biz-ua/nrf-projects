@@ -2,7 +2,9 @@ sample:
   name: Display text strings on HD44780 based 20x4 LCD controller
 tests:
   sample.drivers.lcd.hd44780:
-    platform_allow: arduino_due
+    platform_allow: nrf7002dk_nrf5340_cpuapp nrf7002dk_nrf7001_nrf5340_cpuapp
+    integration_platforms:
+      - nrf7002dk_nrf5340_cpuapp
     tags: display
     harness: display
     depends_on: gpio
