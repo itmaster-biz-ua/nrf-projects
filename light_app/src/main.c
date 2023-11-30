@@ -85,6 +85,13 @@ void main(void)
     printk("PWM Application has started!\r\n");
     int status;
 
+    // PWM setup
+	if (!device_is_ready(pwm_led.dev)) {
+		printk("Error: PWM device %s is not ready\n",
+		       pwm_led.dev->name);
+		return 0;
+	}
+
     // ADC setup
     if (!device_is_ready(adc_channels[0].dev)) {
         printk("Error %d: failed to ADC\n", status);
